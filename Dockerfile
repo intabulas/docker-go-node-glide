@@ -5,9 +5,9 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 #
 # gcc for cgo
 #
-RUN apt-get update \
-  && apt-get upgrade -y \
-  && apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     g++ \
     gcc \
     libc6-dev \
