@@ -6,16 +6,16 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 # gcc for cgo
 #
 RUN apt-get update \
-	&& apt-get upgrade -y \
-	&& apt-get install -y --no-install-recommends \
-		g++ \
-		gcc \
-		libc6-dev \
-		make \
-		pkg-config \
+  && apt-get upgrade -y \
+  && apt-get install -y --no-install-recommends \
+    g++ \
+    gcc \
+    libc6-dev \
+    make \
+    pkg-config \
     xz-utils\
     software-properties-common \
-	&& rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/*
 
 #
 # NodeJS
@@ -59,15 +59,15 @@ ENV GLIDE_DOWNLOAD_SHA256 0e2be5e863464610ebc420443ccfab15cdfdf1c4ab63b5eb25d121
 ENV PATH $PATH:/usr/local/glide/linux-amd64
 
 RUN curl -fsSL "$GLIDE_DOWNLOAD_URL" -o glide.tar.gz \
-	&& echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
-	&& mkdir -p /usr/local/glide \
-	&& tar -C /usr/local/glide -xzf glide.tar.gz \
-	&& rm glide.tar.gz
+  && echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
+  && mkdir -p /usr/local/glide \
+  && tar -C /usr/local/glide -xzf glide.tar.gz \
+  && rm glide.tar.gz
 
 
 #
 # NPM Settings and global dependencies
 #
 RUN /usr/local/bin/npm set progress=false \
-	&& /usr/local/bin/npm config set loglevel warn
+  && /usr/local/bin/npm config set loglevel warn
 
