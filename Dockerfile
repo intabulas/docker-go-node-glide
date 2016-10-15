@@ -2,26 +2,25 @@ FROM golang:1.7.1
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
+#
 # gcc for cgo
+#
 RUN apt-get update \
+	&& apt-get upgrade -y \
 	&& apt-get install -y --no-install-recommends \
 		g++ \
 		gcc \
 		libc6-dev \
 		make \
 		pkg-config \
-    tcl \
-    tk \
     xz-utils\
     software-properties-common \
-	&& apt-get upgrade -y \
 	&& rm -rf /var/lib/apt/lists/*
 
 #
 # NodeJS
 # Origionaly taken from https://github.com/nodejs/docker-node/blob/master/6.8/Dockerfile
 #
-
 
 # gpg keys listed at https://github.com/nodejs/node
 RUN set -ex \
