@@ -75,7 +75,7 @@ RUN /usr/local/bin/npm set progress=false \
 #
 # YARN Package Manager
 #
-RUN apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3 \
+RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3 \
   && echo 'deb http://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list \
-  && apt-get update \
-  && apt-get install yarn
+  && DEBIAN_FRONTEND=noninteractive apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install yarn
