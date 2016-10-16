@@ -6,6 +6,7 @@ This is a base image that has the things I need to do backend and frontend devel
 Included:
 * Golang 1.7.1
 * Glide 0.12.3
+* [Glide Report](https://github.com/Masterminds/glide-report)
 * NodeJS 6.8.1
 
 

@@ -5,6 +5,7 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 #
 # gcc for cgo
 #
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -62,8 +63,8 @@ RUN curl -fsSL "$GLIDE_DOWNLOAD_URL" -o glide.tar.gz \
   && echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
   && mkdir -p /usr/local/glide \
   && tar -C /usr/local/glide -xzf glide.tar.gz \
-  && rm glide.tar.gz
-
+  && rm glide.tar.gz \
+  && go get -u github.com/Masterminds/glide-report
 
 #
 # NPM Settings and global dependencies
