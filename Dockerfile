@@ -1,4 +1,4 @@
-FROM golang:1.7.1
+FROM golang:1.7.3
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
@@ -74,7 +74,4 @@ RUN /usr/local/bin/npm set progress=false \
 #
 # YARN Package Manager
 #
-RUN DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3 \
-  && echo 'deb http://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list \
-  && DEBIAN_FRONTEND=noninteractive apt-get update \
-  && DEBIAN_FRONTEND=noninteractive apt-get install yarn
+RUN npm install yarn -g
