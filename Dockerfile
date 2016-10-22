@@ -26,7 +26,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     pkg-config \
     xz-utils\
     software-properties-common \
-  && rm -rf /var/lib/apt/lists/* \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
   #
   # NodeJS
