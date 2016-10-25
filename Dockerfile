@@ -4,7 +4,7 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 6.9.1
+ENV NODE_VERSION 7.0.0
 
 # ENV for Glide
 ENV GLIDE_VERSION v0.12.3
