@@ -2,6 +2,9 @@ FROM golang:1.7.3
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
+# Env for apt-get
+ENV DEBIAN_FRONTEND noninteractive
+
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 7.0.0
@@ -16,9 +19,9 @@ ENV PATH $PATH:/usr/local/glide/linux-amd64
 #
 # gcc for cgo
 #
-RUN DEBIAN_FRONTEND=noninteractive apt-get update \
-  && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y --no-install-recommends \
     g++ \
     gcc \
     libc6-dev \
