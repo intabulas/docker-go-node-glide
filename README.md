@@ -8,5 +8,5 @@ Included:
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
 * [Glide Report](https://github.com/Masterminds/glide-report)
 * [NodeJS 7.1.0](https://nodejs.org/en/)
-* [Yarn 0.17.2](https://yarnpkg.com/)
+* [Yarn 0.17.4](https://yarnpkg.com/)
 
