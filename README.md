@@ -7,6 +7,6 @@ Included:
 * [Golang 1.7.3](https://golang.org/)
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
 * [Glide Report](https://github.com/Masterminds/glide-report)
-* [NodeJS 7.1.0](https://nodejs.org/en/)
-* [Yarn 0.17.8](https://yarnpkg.com/)
+* [NodeJS 7.2.0](https://nodejs.org/en/)
+* [Yarn 0.17.9](https://yarnpkg.com/)
 
