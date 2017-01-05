@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 7.2.1
+ENV NODE_VERSION 7.4.0
 
 # ENV for Glide
 ENV GLIDE_VERSION v0.12.3
@@ -69,7 +69,8 @@ RUN apt-get update \
   && tar -C /usr/local/glide -xzf glide.tar.gz \
   && rm glide.tar.gz \
   && go get -u github.com/Masterminds/glide-report \
-
+  && go get -u github.com/sgotti/glide-vc \
+  && go get -u github.com/ngdinhtoan/glide-cleanup \
   #
   # NPM Settings and global dependencies
   #
