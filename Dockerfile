@@ -1,4 +1,4 @@
-FROM golang:1.8.0
+FROM golang:1.8.1
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
