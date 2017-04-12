@@ -6,7 +6,7 @@ This is a base image that has the things I need to do backend and frontend devel
 Included:
 * [Golang 1.8.1](https://golang.org/)
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
-* [NodeJS 7.8.0](https://nodejs.org/en/)
+* [NodeJS 7.9.0](https://nodejs.org/en/)
 * [Yarn 0.22](https://yarnpkg.com/)
 
 Glide Plugins:
