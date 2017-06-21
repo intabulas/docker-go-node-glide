@@ -1,4 +1,4 @@
-FROM golang:1.8.2
+FROM golang:1.8.3
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 7.10.0
+ENV NODE_VERSION 8.1.2
 
 # ENV for Glide
 ENV GLIDE_VERSION v0.12.3
@@ -50,7 +50,7 @@ RUN apt-get update \
   ; do \
     gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
     gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
-    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \    
+    gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
   done \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
@@ -73,6 +73,7 @@ RUN apt-get update \
   && go get -u github.com/Masterminds/glide-report \
   && go get -u github.com/sgotti/glide-vc \
   && go get -u github.com/ngdinhtoan/glide-cleanup \
+  && go get -u github.com/golang/dep/cmd/dep \
   #
   # NPM Settings and global dependencies
   #
