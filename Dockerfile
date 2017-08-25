@@ -6,8 +6,7 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
-ENV NPM_CONFIG_LOGLE
-VEL info
+ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.4.0
 
 # ENV for Glide
