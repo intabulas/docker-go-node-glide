@@ -1,4 +1,4 @@
-FROM golang:1.8.3
+FROM golang:1.9.0
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
@@ -6,8 +6,9 @@ MAINTAINER Mark Lussier <mlussier@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
-ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 8.3.0
+ENV NPM_CONFIG_LOGLE
+VEL info
+ENV NODE_VERSION 8.4.0
 
 # ENV for Glide
 ENV GLIDE_VERSION v0.12.3
