@@ -7,8 +7,8 @@ Included:
 * [Golang 1.9.0](https://golang.org/)
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
 * [NodeJS 8.4.0](https://nodejs.org/en/)
-* [Yarn 0.27.5](https://yarnpkg.com/)
-* [Dep 0.3.0](https://github.com/golang/dep)
+* [Yarn 1.0.1](https://yarnpkg.com/)
+* [Dep latest](https://github.com/golang/dep)
 
 Glide Plugins:
 * [Glide Report](https://github.com/Masterminds/glide-report)
