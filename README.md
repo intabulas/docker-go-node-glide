@@ -1,13 +1,15 @@
-A Docker file with Go, Glide and Node Dockerfile
-===============================================
+A Docker file with Go, Glide, Dep and Node
+==========================================
 
 This is a base image that has the things I need to do backend and frontend development in golang and node. It also includes Glide for golang dependency management.
+
+This Dockerfile started before the dep project and most of my older projects are still glide based, which is why both dep and glide are included
 
 Included:
 * [Golang 1.9.0](https://golang.org/)
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
 * [NodeJS 8.5.0](https://nodejs.org/en/)
-* [Yarn 1.0.1](https://yarnpkg.com/)
+* [Yarn 1.0.2](https://yarnpkg.com/)
 * [Dep latest](https://github.com/golang/dep)
 
 Glide Plugins:
