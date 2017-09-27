@@ -8,8 +8,8 @@ This Dockerfile started before the dep project and most of my older projects are
 Included:
 * [Golang 1.9.0](https://golang.org/)
 * [Glide 0.12.3](https://github.com/Masterminds/glide)
-* [NodeJS 8.5.0](https://nodejs.org/en/)
-* [Yarn 1.0.2](https://yarnpkg.com/)
+* [NodeJS 8.6.0](https://nodejs.org/en/)
+* [Yarn 1.1.0](https://yarnpkg.com/)
 * [Dep latest](https://github.com/golang/dep)
 
 Glide Plugins:
