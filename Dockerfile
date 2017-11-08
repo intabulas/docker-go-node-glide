@@ -1,4 +1,4 @@
-FROM golang:1.9.0
+FROM golang:1.9.2
 
 MAINTAINER Mark Lussier <mlussier@gmail.com>
 
@@ -7,10 +7,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 8.6.0
+ENV NODE_VERSION 9.1.0
 
 # ENV for Glide
-ENV GLIDE_VERSION v0.12.3
+ENV GLIDE_VERSION v0.13.1
 ENV GLIDE_DOWNLOAD_URL https://github.com/Masterminds/glide/releases/download/$GLIDE_VERSION/glide-$GLIDE_VERSION-linux-amd64.tar.gz
 ENV GLIDE_DOWNLOAD_SHA256 0e2be5e863464610ebc420443ccfab15cdfdf1c4ab63b5eb25d1216900a75109
 ENV PATH $PATH:/usr/local/glide/linux-amd64
@@ -53,7 +53,7 @@ RUN apt-get update \
     gpg --keyserver keyserver.pgp.com --recv-keys "$key" ; \
   done \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
-  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
+  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"
   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
   && grep " node-v$NODE_VERSION-linux-x64.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
@@ -66,7 +66,7 @@ RUN apt-get update \
   #
 
   &&  curl -fsSL "$GLIDE_DOWNLOAD_URL" -o glide.tar.gz \
-  && echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
+  # && echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
   && mkdir -p /usr/local/glide \
   && tar -C /usr/local/glide -xzf glide.tar.gz \
   && rm glide.tar.gz \
