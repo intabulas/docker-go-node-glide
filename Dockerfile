@@ -7,14 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 9.3.0
-
-# ENV for Glide
-ENV GLIDE_VERSION v0.13.1
-ENV GLIDE_DOWNLOAD_URL https://github.com/Masterminds/glide/releases/download/$GLIDE_VERSION/glide-$GLIDE_VERSION-linux-amd64.tar.gz
-ENV GLIDE_DOWNLOAD_SHA256 0e2be5e863464610ebc420443ccfab15cdfdf1c4ab63b5eb25d1216900a75109
-ENV PATH $PATH:/usr/local/glide/linux-amd64
-
+ENV NODE_VERSION 9.4.0
 
 #
 # gcc for cgo
@@ -60,19 +53,6 @@ RUN apt-get update \
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
 
-  #
-  # GLIDE
-  # Origionaly taken from https://github.com/calavera/go-glide-docker/blob/master/Dockerfile
-  #
-
-  &&  curl -fsSL "$GLIDE_DOWNLOAD_URL" -o glide.tar.gz \
-  # && echo "$GLIDE_DOWNLOAD_SHA256  glide.tar.gz" | sha256sum -c - \
-  && mkdir -p /usr/local/glide \
-  && tar -C /usr/local/glide -xzf glide.tar.gz \
-  && rm glide.tar.gz \
-  && go get -u github.com/Masterminds/glide-report \
-  && go get -u github.com/sgotti/glide-vc \
-  && go get -u github.com/ngdinhtoan/glide-cleanup \
   && go get -u github.com/golang/dep/cmd/dep \
   #
   # NPM Settings and global dependencies
