@@ -6,6 +6,7 @@ This is a base image that has the things I need to do backend and frontend devel
 This Dockerfile started before the dep project and most of my older projects are still glide based, which is why both dep and glide are included
 
 NOTE: Dep 0.4.1 was released 1/24/18, we always pull master so...
+NOTE: Glide has been removed since Dep is becoming stable
 
 Included:
 * [Golang 1.9.3](https://golang.org/)

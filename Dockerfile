@@ -24,12 +24,10 @@ RUN apt-get update \
     software-properties-common \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-
   #
   # NodeJS
   # Origionaly taken from https://github.com/nodejs/docker-node/blob/master/6.8/Dockerfile
   #
-
   && set -ex \
   && for key in \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
@@ -52,15 +50,12 @@ RUN apt-get update \
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-
   && go get -u github.com/golang/dep/cmd/dep \
   #
   # NPM Settings and global dependencies
   #
-
   && /usr/local/bin/npm set progress=false \
   && /usr/local/bin/npm config set loglevel warn \
-
   #
   # YARN Package Manager
   #
