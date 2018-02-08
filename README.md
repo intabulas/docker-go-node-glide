@@ -9,7 +9,7 @@ NOTE: Dep 0.4.1 was released 1/24/18, we always pull master so...
 NOTE: Glide has been removed since Dep is becoming stable
 
 Included:
-* [Golang 1.9.3](https://golang.org/)
+* [Golang 1.9.4](https://golang.org/)
 * [NodeJS 9.5.0](https://nodejs.org/en/) - includes NPM 5.6.0
 * [Yarn 1.3.2](https://yarnpkg.com/)
 * [Dep latest](https://github.com/golang/dep)
