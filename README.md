@@ -12,7 +12,7 @@ Included:
 
 * [Golang 1.10.1](https://golang.org/)
 * [NodeJS 9.11.1](https://nodejs.org/en/) - includes NPM 5.6.0
-* [Yarn 1.5.1](https://yarnpkg.com/)
+* [Yarn 1.6.0](https://yarnpkg.com/)
 * [Dep latest](https://github.com/golang/dep)
 
 Experimental:

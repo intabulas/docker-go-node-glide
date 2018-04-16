@@ -65,4 +65,4 @@ RUN apt-get update \
   #
   # YARN Package Manager
   #
-  && npm install yarn -g
+  && npm install yarn prettier -g
