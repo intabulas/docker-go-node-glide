@@ -23,12 +23,12 @@ RUN apt-get update \
   xz-utils\
   software-properties-common \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-  #
-  # NodeJS
-  # Origionaly taken from https://github.com/nodejs/docker-node/blob/master/6.8/Dockerfile
-  #
-  && set -ex \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#
+# NodeJS
+# Origionaly taken from https://github.com/nodejs/docker-node/blob/master/6.8/Dockerfile
+#
+RUN  set -ex \
   && for key in \
   94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
   FD3A5288F042B6850C66B31F09FE44734EB7990E \
@@ -49,11 +49,11 @@ RUN apt-get update \
   && grep " node-v$NODE_VERSION-linux-x64.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
-  && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-  #
-  # Install dep (latest)
-  #
-  && go get -u github.com/golang/dep/cmd/dep \
+  && ln -s /usr/local/bin/node /usr/local/bin/nodejs
+#
+# Install dep (latest)
+#
+RUN go get -u github.com/golang/dep/cmd/dep \
   #
   # Install VGO (experimental) see: https://github.com/golang/vgo
   && go get -u golang.org/x/vgo \
