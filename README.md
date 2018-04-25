@@ -11,7 +11,7 @@ NOTE: vgo has been added as an experiment
 Included:
 
 * [Golang 1.10.1](https://golang.org/)
-* [NodeJS 9.11.1](https://nodejs.org/en/) - includes NPM 5.6.0
+* [NodeJS 10.0.0](https://nodejs.org/en/) - includes NPM 5.6.0
 * [Yarn 1.6.0](https://yarnpkg.com/)
 * [Dep latest](https://github.com/golang/dep)
 
