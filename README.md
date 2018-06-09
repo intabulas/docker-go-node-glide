@@ -8,8 +8,8 @@ NOTE: Now that vgo was accepted as the go-forward for dependency management, we 
 
 Included:
 
-- [Golang 1.10.2](https://golang.org/)
-- [NodeJS 10.34.0](https://nodejs.org/en/) - includes NPM 6.1.0
+- [Golang 1.10.23](https://golang.org/)
+- [NodeJS 10.4.0](https://nodejs.org/en/) - includes NPM 6.1.0
 - [Yarn 1.7.0](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
 - [Vgo latest](https://github.com/golang/vgo)
