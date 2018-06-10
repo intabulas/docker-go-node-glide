@@ -1,3 +1,5 @@
+SINCE I NO LONGER USE GLIDE THIS REPO IS MIGRATING TO https://hub.docker.com/r/intabulas/go-node-bedrock I WILL KEEP THIS IN SYNC FOR A WHILE
+
 # A Docker file with Go, Dep, Vgo and Node (with npm and yarn)
 
 This is a base image that has the things I need to do backend and frontend development in golang and node. It also includes dep for golang dependency management.
