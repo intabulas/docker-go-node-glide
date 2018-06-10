@@ -73,5 +73,6 @@ RUN go get -u github.com/golang/dep/cmd/dep \
 RUN go get -d github.com/goreleaser/goreleaser \
   && cd $GOPATH/src/github.com/goreleaser/goreleaser \
   && dep ensure -vendor-only \
-  && make setup build
+  && make setup build \
+  && go install
 
