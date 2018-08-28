@@ -10,11 +10,12 @@ NOTE: Now that vgo was accepted as the go-forward for dependency management, we 
 
 NOTE: Added gorelease to the base image since myself and alot of others rely on it for releasing
 
+NOTE: I dropped vgo from this build as experimental support was merged into go1.11
+
 Included:
 
-- [Golang 1.10.3](https://golang.org/)
-- [NodeJS 10.7.0](https://nodejs.org/en/) - includes NPM 6.1.0
-- [Yarn 1.9.2](https://yarnpkg.com/)
+- [Golang 1.11](https://golang.org/)
+- [NodeJS 10.9.0](https://nodejs.org/en/) - includes NPM 6.2.0
+- [Yarn 1.9.4](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
-- [Vgo latest](https://github.com/golang/vgo)
-- [GoReleaser 0.77.1](https://goreleaser.com/)
+- [GoReleaser latest](https://goreleaser.com/)

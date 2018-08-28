@@ -1,4 +1,4 @@
-FROM golang:1.10.3
+FROM golang:1.11
 
 LABEL maintainer="mlussier@gmail.com"
 
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 10.7.0
+ENV NODE_VERSION 10.9.0
 
 #
 # gcc for cgo
@@ -67,9 +67,6 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
 # Install dep (latest)
 #
 RUN go get -u github.com/golang/dep/cmd/dep \
-  #
-  # Install VGO (experimental) see: https://github.com/golang/vgo
-  && go get -u golang.org/x/vgo \
   #
   # NPM Settings and global dependencies
   #
