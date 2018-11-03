@@ -1,4 +1,4 @@
-FROM golang:1.11.1
+FROM golang:1.11.2
 
 LABEL maintainer="mlussier@gmail.com"
 
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 11.0.0
+ENV NODE_VERSION 11.1.0
 
 #
 # gcc for cgo
