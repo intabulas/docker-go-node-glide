@@ -76,13 +76,3 @@ RUN go get -u github.com/golang/dep/cmd/dep \
   # YARN Package Manager
   #
   && npm install yarn prettier -g
-
-#
-# Install GoReleaser see: https://goreleaser.com/
-#
-RUN go get -d github.com/goreleaser/goreleaser \
-  && cd $GOPATH/src/github.com/goreleaser/goreleaser \
-  && dep ensure -vendor-only \
-  && make setup build \
-  && go install
-

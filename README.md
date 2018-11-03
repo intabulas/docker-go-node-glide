@@ -8,8 +8,6 @@ This Dockerfile started before the dep project and most of my older projects are
 
 NOTE: Now that vgo was accepted as the go-forward for dependency management, we will still include dep even after it becomes part of the official tool chain
 
-NOTE: Added gorelease to the base image since myself and alot of others rely on it for releasing
-
 NOTE: I dropped vgo from this build as experimental support was merged into go1.11
 
 Included:
@@ -18,4 +16,3 @@ Included:
 - [NodeJS 11.1.0](https://nodejs.org/en/) - includes NPM 6.4.1
 - [Yarn 1.12.1](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
-- [GoReleaser latest](https://goreleaser.com/)
