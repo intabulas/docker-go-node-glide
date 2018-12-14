@@ -1,4 +1,4 @@
-FROM golang:1.11.2
+FROM golang:1.11.3
 
 LABEL maintainer="mlussier@gmail.com"
 
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 11.3.0
+ENV NODE_VERSION 11.4.0
 
 #
 # gcc for cgo
@@ -36,9 +36,10 @@ RUN set -ex \
   DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
   C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
   B9AE9905FFD7803F25714661B63B535A4C206CA9 \
-  56730D5401028683275BD23C23EFEFE93C4CFFFE \
   77984A986EBC2AA786BC0F66B01FBB92821C587A \
   8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
+  4ED778F539E3634C779C87C6D7062848A1AB005C \
+  A48C2BEE680E841632CD4E44F07496B3EB3C1762 \
   ; do \
   gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" || \
   gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" || \
@@ -61,6 +62,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
+  && apt-get purge -y --auto-remove $buildDeps \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 #
@@ -75,4 +77,4 @@ RUN go get -u github.com/golang/dep/cmd/dep \
   #
   # YARN Package Manager
   #
-  && npm install yarn prettier -g
+  && npm install yarn prettier npm -g

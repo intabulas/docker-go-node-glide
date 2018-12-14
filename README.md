@@ -12,7 +12,8 @@ NOTE: I dropped vgo from this build as experimental support was merged into go1.
 
 Included:
 
-- [Golang 1.11.2](https://golang.org/)
-- [NodeJS 11.3.0](https://nodejs.org/en/) - includes NPM 6.4.1
+- [Golang 1.11.3](https://golang.org/)
+- [NodeJS 11.4.0](https://nodejs.org/en/) - includes NPM 6.4.1
 - [Yarn 1.12.3](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
+- [NPM Latest](https://www.npmjs.com/package/npm) since Node is still shipping older version
