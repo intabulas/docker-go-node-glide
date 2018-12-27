@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 11.5.0
+ENV NODE_VERSION 11.6.0
 
 #
 # gcc for cgo
@@ -77,4 +77,4 @@ RUN go get -u github.com/golang/dep/cmd/dep \
   #
   # YARN Package Manager
   #
-  && npm install yarn prettier npm -g
+  && npm install yarn prettier -g
