@@ -12,9 +12,9 @@ NOTE: I dropped vgo from this build as experimental support was merged into go1.
 
 Included:
 
-- [Golang 1.11.4](https://golang.org/)
-- [NodeJS 11.6.0](https://nodejs.org/en/) - includes NPM 6.5.0-next.0
-- [Yarn 1.12.3](https://yarnpkg.com/)
+- [Golang 1.11.5](https://golang.org/)
+- [NodeJS 11.7.0](https://nodejs.org/en/) - includes NPM 6.5.0
+- [Yarn 1.13.0](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
 - [Packr latest 1.x](https://github.com/gobuffalo/packr)
 
