@@ -1,4 +1,4 @@
-FROM golang:1.11.5
+FROM golang:1.12.0
 
 LABEL name="Go Node Glide"
 LABEL maintainer="mlussier@gmail.com"
@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ENV for Node and NPM
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 11.10.0
+ENV NODE_VERSION 11.10.1
 
 #
 # gcc for cgo
