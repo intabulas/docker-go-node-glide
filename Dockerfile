@@ -23,6 +23,7 @@ RUN apt-get update \
   pkg-config \
   xz-utils\
   software-properties-common \
+  netcat \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #
