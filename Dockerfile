@@ -1,4 +1,4 @@
-FROM golang:1.12.0
+FROM golang:1.12.1
 
 LABEL name="Go Node Glide"
 LABEL maintainer="mlussier@gmail.com"
