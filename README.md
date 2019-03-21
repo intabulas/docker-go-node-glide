@@ -1,5 +1,7 @@
 SINCE I NO LONGER USE GLIDE THIS REPO IS MIGRATING TO https://hub.docker.com/r/intabulas/go-node-bedrock I WILL KEEP THIS IN SYNC FOR A WHILE
 
+NOTE: I will stop syncing things from [bedrock](https://hub.docker.com/r/intabulas/go-node-bedrock) on April 8th
+
 # A Docker file with Go, Dep, Vgo and Node (with npm and yarn)
 
 This is a base image that has the things I need to do backend and frontend development in golang and node. It also includes dep for golang dependency management.
@@ -12,8 +14,8 @@ NOTE: I dropped vgo from this build as experimental support was merged into go1.
 
 Included:
 
-- [Golang 1.12.0](https://golang.org/)
-- [NodeJS 11.11.0](https://nodejs.org/en/) - includes NPM 6.7.0
+- [Golang 1.12.1](https://golang.org/)
+- [NodeJS 11.12.0](https://nodejs.org/en/) - includes NPM 6.7.0
 - [Yarn 1.13.0](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
 - [Packr latest 1.x](https://github.com/gobuffalo/packr)
