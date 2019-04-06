@@ -14,7 +14,7 @@ NOTE: I dropped vgo from this build as experimental support was merged into go1.
 
 Included:
 
-- [Golang 1.12.1](https://golang.org/)
+- [Golang 1.12.2](https://golang.org/)
 - [NodeJS 11.13.0](https://nodejs.org/en/) - includes NPM 6.7.0
 - [Yarn 1.15.2](https://yarnpkg.com/)
 - [Dep latest](https://github.com/golang/dep)
